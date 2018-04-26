@@ -1,0 +1,125 @@
+@import "crmbase.less";
+
+
+.clear {
+    clear: both;
+}
+
+.search {
+    margin-left: 35px;
+    margin-top: 10px;
+    width: 95%;
+    background-color: #f5fafe;
+}
+
+.search .form-group {
+    float: left;
+    width: 31%;
+    padding-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+
+.form-groupbutton {
+    margin-bottom: 15px;
+    background-color: #f5fafe;
+    margin-left: 10px;
+}
+
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857;
+    padding: 6px 0px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 90%;
+}
+
+.table_result {
+    margin-left: 35px;
+    margin-top: 10px;
+    width: 95%;
+}
+
+/*table_loading*/
+.table_loading {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.table_loading p {
+    text-align: center;
+    font-size: 13px;
+}
+
+.table_loading p img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+/*·ÖÒ³*/
+.pager {
+    list-style: outside none none;
+    text-align: center;
+}
+
+.pagination {
+    border-radius: 4px;
+    display: inline-block;
+    margin: 20px 0;
+    padding-left: 0;
+}
+
+.pagination > li:first-child {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+
+.pager li {
+    display: inline;
+}
+
+.pagination > li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #428bca;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.pagination > li:hover, pagination > li:focus {
+    background-color: #eee;
+    border-color: #ddd;
+    color: #2a6496;
+}
+
+.pagination > .active, .pagination > .active:hover, .pagination > .active:focus {
+    background-color: #428bca;
+    border-color: #428bca;
+    color: #fff;
+    cursor: default;
+    z-index: 2;
+}

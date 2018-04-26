@@ -1,0 +1,264 @@
+﻿
+* {
+    font-family: "微软雅黑";
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul, li, dl, dd, p, dt {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+body, html {
+    -moz-text-size-adjust: none;
+    color: #000;
+    font-size: 14px;
+}
+
+input {
+    font-family: "微软雅黑";
+}
+
+img {
+    border: 0 none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #c49023;
+    }
+
+input {
+    outline: medium none;
+}
+
+textarea {
+    outline: medium none;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.top {
+    background: #313335 none repeat scroll 0 0;
+    height: 36px;
+    line-height: 36px;
+}
+
+    .top .site_nav_top {
+        margin: 0 auto;
+        position: relative;
+        width: 1200px;
+    }
+
+        .top .site_nav_top a, .top .site_nav_top span.service {
+            color: #c1c3c9;
+        }
+
+            .top .site_nav_top a:hover {
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+.crmlogo .site_nav_logo {
+    margin: 5px auto;
+    width: 1200px;
+    overflow: hidden;
+}
+
+    .crmlogo .site_nav_logo .site_nav_logo_l, .logo .site_nav_logo .site_nav_logo_r {
+        float: left;
+        height: 73px;
+    }
+
+    .crmlogo .site_nav_logo .site_nav_logo_l {
+        width: 415px;
+    }
+
+    .crmlogo .site_nav_logo .site_nav_logo_r {
+        width: 785px;
+    }
+
+.banner {
+    width: 100%;
+}
+
+.slider {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    backface-visibility: hidden;
+    height: auto;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.slide {
+    clear: none;
+    float: left;
+    height: auto;
+}
+
+.box {
+    color: #fff;
+    font-size: 5em;
+    height: auto;
+    line-height: 5;
+    text-align: center;
+    text-transform: capitalize;
+    vertical-align: middle;
+    width: 100%;
+}
+
+    .box img {
+        width: 100%;
+    }
+
+
+.foo {
+    border-top: 1px solid #c1c3c5;
+    padding: 15px 0;
+}
+
+    .foo p {
+        padding: 5px 0;
+        text-align: center;
+    }
+
+.crmlogin {
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 350px;
+    width: 348px;
+    margin: -175px 0 0 -174px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #444;
+}
+
+    .crmlogin h2 {
+        border-bottom: 1px solid #cccccc;
+        color: #428bca;
+        font-size: 35px;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+.crmloginform {
+    height: 170px;
+    position: relative;
+}
+
+    .crmloginform .input-group {
+        position: relative;
+        display: table;
+        border-collapse: separate;
+        overflow: hidden;
+    }
+
+    .crmloginform .text .input-group-code {
+        padding: 0px !important;
+        margin: 0px !important;
+        float: left;
+    }
+
+        .crmloginform .text .input-group-code img {
+            cursor: pointer;
+            float: left;
+        }
+
+        .crmloginform .text .input-group-code .Verification {
+            width: 80px;
+            height: 38px;
+        }
+
+    .crmloginform .text {
+        height: 46px;
+        line-height: 46px;
+    }
+
+    .crmloginform .text, .loginbox .btns {
+        width: 85%;
+        margin-left: 25px;
+        margin-bottom: 5px;
+    }
+
+
+
+
+.crmform-control {
+    width: 92%;
+    height: 24px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    float: left;
+}
+
+.textcode {
+    width: 189px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+#bg {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    -moz-opacity: 0.4;
+    opacity: .40;
+    filter: alpha(opacity=70);
+}

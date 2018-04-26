@@ -1,0 +1,10 @@
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\bin\Debug\StockNews.Service.dll
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\bin\Debug\StockNews.Service.pdb
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\obj\Debug\StockNews.Service.csproj.CoreCompileInputs.cache
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\obj\Debug\StockNews.Service.dll
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\obj\Debug\StockNews.Service.pdb
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\bin\Debug\StockNews.Entity.dll
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\bin\Debug\StockNews.Entity.pdb
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\bin\Debug\StockNews.Entity.dll.config
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\obj\Debug\StockNews.Service.csprojResolveAssemblyReference.cache
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Service\obj\Debug\StockNews.Service.csproj.CopyComplete

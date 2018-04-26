@@ -1,0 +1,7 @@
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Entity\bin\Debug\StockNews.Entity.dll.config
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Entity\bin\Debug\StockNews.Entity.dll
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Entity\bin\Debug\StockNews.Entity.pdb
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Entity\obj\Debug\StockNews.Entity.csproj.CoreCompileInputs.cache
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Entity\obj\Debug\StockNews.Entity.dll
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Entity\obj\Debug\StockNews.Entity.pdb
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.Entity\obj\Debug\StockNews.Entity.csprojResolveAssemblyReference.cache

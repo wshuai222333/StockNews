@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+<style type="text/css">
+    .mainindex {
+        margin: 20px 0 0 20px;
+    }
+    .mainindex .welinfo {
+            height: 32px;
+            line-height: 32px;
+            font-size: 12px;
+        }
+    .mainindex .welinfo img {
+                float: left;
+                margin-right: 10px;
+            }
+</style>
+<div class="mainindex">
+    <div class="welinfo">
+        <span>
+            <b>工作人员您好，欢迎使用运营平台</b>
+        </span>
+
+    </div>
+    <div class="welinfo">
+        <span>
+            您本次登录的时间：@DateTime.Now.ToString("yyyy/MM/dd")
+        </span>
+    </div>
+</div>
+

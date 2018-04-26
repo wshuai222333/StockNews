@@ -1,0 +1,6 @@
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.DDD\bin\Debug\StockNews.DDD.dll
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.DDD\bin\Debug\StockNews.DDD.pdb
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.DDD\obj\Debug\StockNews.DDD.csproj.CoreCompileInputs.cache
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.DDD\obj\Debug\StockNews.DDD.dll
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.DDD\obj\Debug\StockNews.DDD.pdb
+C:\Users\wshuai222333\documents\visual studio 2017\Projects\StockNews.Web\StockNews.DDD\obj\Debug\StockNews.DDD.csprojResolveAssemblyReference.cache

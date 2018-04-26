@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+/* 你自己的样式 */
+
+.FilesList .fileItem {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.FilesList .fileItem b {
+    margin-left: 10px;
+}
+
+/*.webuploader-element-invisible {
+    display: none;
+}*/
+.FilesListThumb {
+    width:150px !important;
+    height:155px !important;
+}
+.SelectFileThumb {
+
+    margin-top:60px !important;
+}
+.jrmsg {
+    display:none;
+    border: 1px solid #f00;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #f00;
+    font-size: 14px;
+    background: #ffc;
+}

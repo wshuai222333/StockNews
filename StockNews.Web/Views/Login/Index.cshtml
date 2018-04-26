@@ -1,0 +1,137 @@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/wwwroot/css/boss.css" rel="stylesheet" />
+<link href="~/wwwroot/css/h-ui.admin/css/style.css" rel="stylesheet" />
+<div class="top">
+    <div class="site_nav_top">
+        <a href="/Boss/">欢迎登录运营平台</a>
+       
+    </div>
+</div>
+
+
+
+<div class="banner">
+    <div class="slider">
+        <ul class="slides">
+            <li class="slide">
+                <div class="box">
+                    <img src="~/wwwroot/images/new_houtaibj.jpg">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="crmlogin">
+    <h2>登录</h2>
+    <div class="crmloginform">
+        <div class="text">
+            <input type="text" class="crmform-control" name="UserName" id="UserName" placeholder="帐号（手机/电子邮箱格式）" value="admin" />
+        </div>
+        <div class="clear"></div>
+        <div class="text">
+            <input type="password" class="crmform-control" name="UserPwd" id="UserPwd" placeholder="登录密码" value="admin654321" />
+        </div>
+        <div class="clear"></div>
+        <div class="text">
+            <div class="input-group">
+                <input type="text" class="crmform-control textcode" name="UserCode" id="UserCode" placeholder="验证码" />
+                <div class="input-group-code">
+                    <img src="/Login/Verification" class="Verification" onclick="refresh(this);" />
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="text" style="line-height:normal;">
+            <a class="btn btn-primary radius btn-block" href="javascript:void(0);" onclick="btnlogin();">立即登录</a>
+        </div>
+    </div>
+</div>
+<div class="bg" id="bg"></div>
+
+
+<div class="foo">
+    <p>版权所有</p>
+</div>
+
+
+<script type="text/javascript">
+    //回车事件
+    $(function () {
+        document.onkeydown = function (e) {
+            var ev = document.all ? window.event : e;
+            if (ev.keyCode == 13) {
+                btnlogin();
+            }
+        }
+    });
+
+    ///刷新验证码
+    function refresh(t) {
+        var obj = $(t);
+        obj.attr("src", "");
+        obj.attr("src", "/Boss/Login/Verification?times=" + Math.random());
+    }
+
+    ///登录
+    function btnlogin() {
+        layer.msg('正在登录系统请稍后...', {
+            icon: 16, shade: 0.5
+        });
+        var params = {};
+        var valid = ValidParameters(params);
+        if (!valid) {
+            return;
+        }
+        var time = (Math.random() * 1000) + 100;
+        var url = "/Login/LoginAuth?time=" + time;
+        $.post(
+            url,
+            params,
+            function (response) {
+                if (response.IsSuccess) {
+                    window.location = "/Main/Index";
+                }
+                else {
+                    layertishimsg(response.Massage, function () { });
+                }
+            });
+    }
+    //验证表单
+    function ValidParameters(param) {
+        var userName = $("#UserName");
+        var userPwd = $("#UserPwd");
+        var userCode = $("#UserCode");
+
+        if (!emptyUtils(userName)) {
+            layertishimsg("帐号不能为空！", function () {
+                userName.focus();
+            });
+            return false;
+        }
+
+        if (!emptyUtils(userPwd)) {
+            layertishimsg("密码不能为空！", function () {
+                userPwd.focus();
+            });
+            return false;
+        }
+
+        if (!emptyUtils(userCode)) {
+            layertishimsg("验证码不能为空！", function () {
+                userCode.focus();
+            });
+            return false;
+        }
+
+        param.UserName = userName.val();
+        param.UserPwd = userPwd.val();
+        param.UserCode = userCode.val();
+
+        return true;
+    }
+</script>

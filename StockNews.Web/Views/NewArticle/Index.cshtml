@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.BreadcrumbOne = "功能";
+    ViewBag.BreadcrumbTwo = "新闻列表";
+}
+
+
+    
+<!--面包屑-->
+@Html.Partial("_Breadcrumb")
+
+<div>
+    <div class="table_item">
+        <div class="search">
+            <!--查询条件-->
+            <div class="form-group">
+                <label class="form-label col-xs-4 col-sm-2" style="width:auto"><span class="c-red">*</span>发布开始日期：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    <input type="text" name="BeginTime" id="BeginTime" onClick="WdatePicker()" class="form-control Wdate disabled" readonly />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label col-xs-4 col-sm-2" style="width:auto"><span class="c-red">*</span>发布结束日期：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    <input type="text" name="EndTime" id="EndTime" onClick="WdatePicker()" class="form-control Wdate disabled" readonly />
+                </div>
+            </div>
+          
+
+            <div class="clear"></div>
+
+            <!--操作按钮-->
+            <div class="form-groupbutton">
+                <button class="btn btn-success radius" name="newArticlesearch" type="submit" onclick="newArticlesearch(1)">
+                    <i class="Hui-iconfont">&#xe665;</i>
+                    查询
+                </button>
+                <button class="btn btn-primary radius" name="departmentadd" type="submit" onclick="newArticleAdd()">
+                    <i class="Hui-iconfont">&#xe600;</i>
+                    新增新闻
+                </button>
+            </div>
+        </div>
+        <!--查询结果-->
+        <div class="table_result main_table">
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //页面加载
+    $(window).load(function () {
+        //MonthDownList();
+        //getBaseCompanyInfo();
+        newArticlesearch(1);
+    });
+    ///查询数据
+    function newArticlesearch(pageindex) {
+        var pagesize = 10;
+        //提交执行
+        $(".table_result").cgtAjax({
+            Type: "post",
+            Url: "/NewArticle/GetNewArticleList",
+            dataType: "json",
+            Params: {
+                
+                "BeginTime": $("input[name='BeginTime']").val(),
+                "EndTime": $("input[name='EndTime']").val(),
+                "pagesize": pagesize,
+                "pageindex": pageindex
+            },
+            Header: {
+                "NewArticleId": "序号",
+                "Title": "标题",
+                "Body": "内容",
+                "ReleaseTime": "发布时间",
+                "CreateTime": "创建时间",
+                "UpdateTime": "修改时间",
+                "operation": "操作"
+            },
+            buttonClickCallback: newArticlesearch,
+            IsRowsEvent: true,//是否执行自定义数据绑定
+            RowsEvent: function (p, rows) {
+                var result = "";
+                switch (p) {
+                    //case "Body":
+                    //    debugger;
+                    //    result = rows.Body.substr(0,500);
+                    //可修改要现实的中文信息
+                    case "UpdateTime":
+                        
+                        result = jsonTimeFormat(rows.UpdateTime);
+                        break;
+                    case "CreateTime":
+                       
+                        result = jsonTimeFormat(rows.CreateTime);
+                        break;
+                    case "ReleaseTime":
+                        result = jsonDateFormat(rows.ReleaseTime);
+                        break;
+                    case "operation":
+                        result = operationBtn(rows.NewArticleId, "Edit|Del");
+                        break;
+                }
+                return result;
+            }//自定义数据方法
+        });
+    }
+    //添加新闻
+    function newArticleAdd() {
+        var url = '/NewArticle/Add/' + 0;
+        var title = '添加新闻';
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    //编辑新闻
+    function edit(id) {
+        var url = '/NewArticle/Add/' + id;
+        var title = '修改新闻';
+
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    //删除新闻
+    function del(id) {
+        layer.confirm('确认要删除吗', function (index) {
+            $.post(
+                '/NewArticle/DeleteNewArticl',
+                {
+                    'NewArticleId': id,
+                   
+                }
+                , function (data) {
+                    layer.msg(data.Massage, { icon: 1, time: 1000 }, function () {
+                        window.location.reload();
+                    });
+                });
+        });
+    }
+</script>
+
+
